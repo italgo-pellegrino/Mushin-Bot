@@ -13,10 +13,9 @@ public class contactCommand implements ServerCommand{
 	public void performCommand(Member m, TextChannel channel, Message message) {		
 					
 			String[] args = message.getContentDisplay().split(" ");
-			channel.sendMessage("Für fragen bin ich gerne wie folgt zu erreichen:\r\n" +
+			channel.sendMessage("Fï¿½r fragen bin ich gerne wie folgt zu erreichen:\r\n" +
 					"**Email: italgo.bot@web.de**\r\n" +
-					"**Discord: italgo#1324**\r\n\r\n" +
-					"Sollte euch der Bot gefallen würde ich mich über eine kleine Spende freuen: **PayPal: italgo@web.de**"
+					"**Discord: italgo#1324**\r\n\r\n" 
 			).queue();
 			
 			 message.delete().queue();						

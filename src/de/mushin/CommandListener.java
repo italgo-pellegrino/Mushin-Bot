@@ -1,8 +1,5 @@
 package de.mushin;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
 import net.dv8tion.jda.api.entities.ChannelType;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;

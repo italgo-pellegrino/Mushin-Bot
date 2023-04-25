@@ -33,8 +33,8 @@ public class Main {
 	public Main() throws LoginException, IllegalArgumentException{
 		
 		INSTANCE = this;		
-		
-		JDABuilder builder = JDABuilder.createDefault("ODIwNjAyNDAwMzU1NTE2NDI2.YE3jig.hReL96qkfgXxJnknwINeDZdN72A");
+		//ID wurde entfernt
+		JDABuilder builder = JDABuilder.createDefault("");
 		
 			
 		builder.setActivity(Activity.playing("!boss help |- for Info"));

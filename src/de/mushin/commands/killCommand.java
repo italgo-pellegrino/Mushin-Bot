@@ -27,7 +27,7 @@ public class killCommand implements ServerCommand {
 				if(containsBoss(args[2])) {								
 					Calendar cal = Calendar.getInstance();
 					SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-					channel.sendMessage(getBoss(args[2]).toString() + " getötet um: " + sdf.format(cal.getTime())).queue();		
+					channel.sendMessage(getBoss(args[2]).toString() + " getï¿½tet um: " + sdf.format(cal.getTime())).queue();		
 					timerBoss(getBoss(args[2]), channel);
 				} else {
 					channel.sendMessage("`"+args[2]+" ist kein Boss`").queue();
@@ -38,7 +38,7 @@ public class killCommand implements ServerCommand {
 				if(containsBoss(args[2])) {								
 					Calendar cal = Calendar.getInstance();
 					SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
-					channel.sendMessage(getBoss(args[2]).toString() + " getötet um: " + sdf.format(cal.getTime())+" auf Kanal: "+ args[3]).queue();		
+					channel.sendMessage(getBoss(args[2]).toString() + " getï¿½tet um: " + sdf.format(cal.getTime())+" auf Kanal: "+ args[3]).queue();		
 					timerBoss(getBoss(args[2]),args[3], channel);
 				} else {
 					channel.sendMessage("`"+args[2]+" ist kein Boss`").queue();
@@ -77,7 +77,7 @@ public class killCommand implements ServerCommand {
 		//821273876058341456
 		TimerTask task = new TimerTask() {
 	        public void run() {
-	        	if(boss!= Boss.Byung && boss!= Boss.Chung && boss != Boss.Steingolem && boss != Boss.SchluchtLycan && boss != Boss.Einzelkämpfer && boss != Boss.Akgol && boss != Boss.Minpae && boss != Boss.Phantom) {
+	        	if(boss!= Boss.Byung && boss!= Boss.Chung && boss != Boss.Steingolem && boss != Boss.SchluchtLycan && boss != Boss.EinzelkÃ¤mpfer && boss != Boss.Akgol && boss != Boss.Minpae && boss != Boss.Phantom) {
 	        		channel.sendMessage(role+" "+boss.toString() + " spawnt in 5 Minuten auf Kanal: "+ s).queue();	
 	        	}else {
 	        		switch (boss) {
@@ -87,9 +87,9 @@ public class killCommand implements ServerCommand {
 	        	    	break; 
 	        		 case Steingolem: channel.sendMessage(role+" "+Boss.SchluchtLycan.toString() + " spawnt in 10 Minuten auf Kanal: "+ s).queue(); 
 	        	    	break; 
-	        		 case SchluchtLycan: channel.sendMessage(role+" "+Boss.Einzelkämpfer.toString() + " spawnt in 10 Minuten auf Kanal: "+ s).queue(); 
+	        		 case SchluchtLycan: channel.sendMessage(role+" "+Boss.EinzelkÃ¤mpfer.toString() + " spawnt in 10 Minuten auf Kanal: "+ s).queue(); 
 	        	    	break; 
-	        		 case Einzelkämpfer: channel.sendMessage(role+" "+Boss.Akgol.toString() + " spawnt in 10 Minuten auf Kanal: "+ s).queue(); 
+	        		 case EinzelkÃ¤mpfer: channel.sendMessage(role+" "+Boss.Akgol.toString() + " spawnt in 10 Minuten auf Kanal: "+ s).queue(); 
 	        	    	break;
 	        		 case Akgol: channel.sendMessage(role+" "+Boss.Byung.toString() + " spawnt in 10 Minuten auf Kanal: "+ s).queue(); 
 	        	    	break; 
@@ -118,7 +118,7 @@ public void timerBoss(Boss boss, TextChannel channel) {
 		//821273876058341456
 		TimerTask task = new TimerTask() {
 	        public void run() {
-	        	if(boss!= Boss.Byung && boss!= Boss.Chung && boss != Boss.Steingolem && boss != Boss.SchluchtLycan && boss != Boss.Einzelkämpfer && boss != Boss.Akgol && boss != Boss.Minpae && boss != Boss.Phantom) {
+	        	if(boss!= Boss.Byung && boss!= Boss.Chung && boss != Boss.Steingolem && boss != Boss.SchluchtLycan && boss != Boss.EinzelkÃ¤mpfer && boss != Boss.Akgol && boss != Boss.Minpae && boss != Boss.Phantom) {
 	        		channel.sendMessage("<@&821002727165263902>"+" "+boss.toString() + " spawnt in 5 Minuten.").queue();	
 	        	}else {
 	        		switch (boss) {
@@ -128,9 +128,9 @@ public void timerBoss(Boss boss, TextChannel channel) {
 	        	    	break; 
 	        		 case Steingolem: channel.sendMessage("<@&821002727165263902>"+" "+Boss.SchluchtLycan.toString() + " spawnt in 10 Minuten.").queue(); 
 	        	    	break; 
-	        		 case SchluchtLycan: channel.sendMessage("<@&821002727165263902>"+" "+Boss.Einzelkämpfer.toString() + " spawnt in 10 Minuten.").queue(); 
+	        		 case SchluchtLycan: channel.sendMessage("<@&821002727165263902>"+" "+Boss.EinzelkÃ¤mpfer.toString() + " spawnt in 10 Minuten.").queue(); 
 	        	    	break; 
-	        		 case Einzelkämpfer: channel.sendMessage("<@&821002727165263902>"+" "+Boss.Akgol.toString() + " spawnt in 10 Minuten.").queue(); 
+	        		 case EinzelkÃ¤mpfer: channel.sendMessage("<@&821002727165263902>"+" "+Boss.Akgol.toString() + " spawnt in 10 Minuten.").queue(); 
 	        	    	break;
 	        		 case Akgol: channel.sendMessage("<@&821002727165263902>"+" "+Boss.Byung.toString() + " spawnt in 10 Minuten.").queue(); 
 	        	    	break; 
@@ -178,7 +178,7 @@ public void timerBoss(Boss boss, TextChannel channel) {
     	
 	    case Sanha: return delay = 2*h-5*min; 
     
-	    case Schwarzfuß: return delay = 3*h-5*min; 
+	    case Schwarzfuss: return delay = 3*h-5*min; 
     	
 	    case Sindon: return delay = 3*h-5*min; 
     
@@ -194,7 +194,7 @@ public void timerBoss(Boss boss, TextChannel channel) {
     	
 	    case SchluchtLycan: return delay = 4*h-10*min; 
     	
-	    case Einzelkämpfer: return delay = 4*h-10*min; 
+	    case EinzelkÃ¤mpfer: return delay = 4*h-10*min; 
     	
 	    case Akgol: return delay = 4*h-10*min; 
     	
